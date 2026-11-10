@@ -1,0 +1,773 @@
+.moi_container {
+    width: 100%;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00240e;
+}
+
+.moi_desc1 {
+    text-align: center;
+    font-size: clamp(34px, 9vw, 42px);
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+
+.moi_desc2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+    padding: 0 24px;
+    color: #4a5c50;
+}
+
+.moi_img {
+    width: 100%;
+    margin: 30px 0 8px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5%;
+}
+
+.img_big {
+    width: 36%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(0, 36, 14, .16);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    /* animation: flash-shadow-img 2s infinite; */
+    z-index: 2;
+
+    transition: all 2s ease-in-out;
+
+}
+
+.img_small {
+    width: 27%;
+    height: auto;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+    /* animation: flash-shadow-img 2s infinite; */
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 36, 14, .10);
+    z-index: 1;
+
+    transition: all 2s ease-in-out;
+}
+
+@keyframes flash-shadow-img {
+    0%, 100% 
+    {
+        box-shadow: 0 0 5px rgba(157, 157, 157, 0.534);
+    }
+    50% 
+    {
+        box-shadow: 0 0 7px rgba(60, 60, 60, 0.556);
+    }
+}
+
+.js_left {
+    opacity: 0;
+    transform: translateX(-80px);
+}
+
+.js_center {
+    transform: scale(1.5);
+}
+
+.js_right {
+    opacity: 0;
+    transform: translateX(80px);
+}
+
+.moi_desc3 {
+    color: #725627;
+    text-align: left;
+    text-indent: 28px;
+    font-size: 14.5px;
+    width: 84%;
+    max-width: 520px;
+    margin: 26px 0 0;
+    font-style: italic;
+    line-height: 26px;
+    hyphens: none;
+    overflow-wrap: break-word;
+}
+
+
+
+/* comfirm.......................................................................................... */
+.cf_container {
+    margin-top: 56px;
+    box-shadow: 0 5px 20px rgba(225, 237, 235, 0.648);
+    padding: 30px 24px 26px;
+    text-align: center;
+    width: 84%;
+    max-width: 460px;
+    border-radius: 16px;
+    margin-bottom: 72px;
+
+    background-color: rgb(242, 251, 251);
+}
+
+.cf_container {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 4.2s ease;
+    color: #001508;
+
+}
+
+.cf_container.show {
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes flash-shadow {
+    0%, 100% 
+    {
+        box-shadow: 0 0 12px rgb(208, 211, 211);
+    }
+    50% 
+    {
+        box-shadow: 0 0 15px rgb(179, 190, 188);
+    }
+}
+
+.nhay-shadow {
+animation: flash-shadow 2s infinite;
+}
+
+
+
+.cf_container > div {
+    margin-top: 8px;
+}
+
+/* Hai su kien: le thanh hon + tiec moi co ............................ */
+.cf_event {
+    margin-top: 0 !important;
+}
+
+.cf_event > div {
+    margin-top: 6px;
+}
+
+.cf_sep {
+    height: 1px;
+    width: 72%;
+    margin: 24px auto !important;
+    background: linear-gradient(to right,
+        transparent, rgba(0, 21, 8, .35), transparent);
+}
+
+.cf_place {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 10px !important;
+    color: #40544c;
+}
+
+.cf_place_name {
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
+.cf_place_addr {
+    font-size: 12.5px;
+    line-height: 18px;
+}
+
+.cf_map_link {
+    align-self: center;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: 1px solid rgba(0, 21, 8, .22);
+    border-radius: 999px;
+    color: #2c463d;
+    font-size: 12.5px;
+    letter-spacing: .3px;
+    text-decoration: none;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.cf_map_link::before {
+    content: "📍";   /* ghim ban do */
+    margin-right: 5px;
+    font-size: 11px;
+}
+
+.cf_map_link:hover {
+    background-color: #e3efec;
+    border-color: rgba(0, 21, 8, .38);
+}
+
+.cf_desc1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 1.5px;
+}
+
+.cf_desc2 {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.cf_desc3 {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-top: 10px !important;
+}
+
+.cf_desc4 {
+    color: #555;
+    font-size: 13.5px;
+    font-style: italic;
+}
+
+.cf_event + .cf_btn,
+.cf_sep + .cf_event + .cf_btn {
+    margin-top: 26px;
+}
+
+.cf_btn {
+    border: none;
+    padding: 14px 18px;
+    border-radius: 10px;
+    width: 76%;
+    max-width: 280px;
+    margin: 7px 0;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(174, 174, 174, 0.35);
+    background-color: #e0edec;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: .3px;
+    transition: background-color .25s ease, box-shadow .25s ease, transform .15s ease;
+}
+
+.cf_btn:hover {
+    background-color: #ccd4d3;
+    box-shadow: 0 6px 14px rgba(120, 120, 120, 0.35);
+}
+
+.cf_btn:active {
+    transform: translateY(1px);
+}
+
+.cf_btn > a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Nut chinh: xac nhan tham du - hanh dong quan trong nhat */
+.cf_btn_main {
+    background-color: #2f5d52;
+    box-shadow: 0 5px 14px rgba(47, 93, 82, .32);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: .6px;
+}
+
+.cf_btn_main > a {
+    color: #fff;
+}
+
+.cf_btn_main:hover {
+    background-color: #24493f;
+    box-shadow: 0 7px 18px rgba(47, 93, 82, .42);
+}
+
+/* .cf_icon {
+    display: block;
+    margin-top: 12px !important;
+}
+
+.cf_map {
+    display: block;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #909090;
+    border-radius: 50%;
+    padding: 14px;
+    margin: 0 auto;
+} */
+
+/* pop_up........................... */
+.popup {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100dvh;
+    display: none;
+    z-index: 3;
+    background-color: rgba(20, 20, 20, .62);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+/* popup la flex-column de chua ca the QR lan cham chi bao */
+.popup.show {
+    flex-direction: column;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup_container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    padding: 0 26px;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+}
+
+.popup_item {
+    /* container da co padding nen content box vua dung mot the */
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popup_item {
+    opacity: 0.8;
+    transform: scale(0.8);
+    transition: opacity 0.2s linear, transform 0.2s linear;
+  }
+  
+
+
+.popup_item > img {
+    border-radius: 18px;
+    width: 100%;
+    height: auto;
+    max-height: 68dvh;
+    object-fit: contain;   /* khong cat mat phan nao cua ma QR */
+}
+
+@media (min-width: 440px) {
+    .popup_container {
+        padding: 0 60px;
+    }
+
+    .popup_item {
+        flex: 0 0 100%;
+    }
+}
+  
+
+/* transform: translateX(60px) */
+/* transform: translateX(-60px) */
+
+.popup_hint {
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, .88);
+    font-size: 12.5px;
+    letter-spacing: .3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+    pointer-events: none;
+}
+
+.popup_dots {
+    display: flex;
+    gap: 6px;
+}
+
+.popup_dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .40);
+    transition: background-color .25s ease, transform .25s ease;
+}
+
+.popup_dot.active {
+    background-color: #fff;
+    transform: scale(1.18);
+}
+
+
+.copy {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1b3a33;
+    font-size: 15px;
+    letter-spacing: .3px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .18);
+    transition: background-color .2s ease, transform .12s ease;
+    z-index: 4;
+}
+
+.copy:hover {
+    background-color: #e6f1ef;
+}
+
+.copy:active {
+    transform: translateY(1px);
+}
+
+/* Nut chua co so tai khoan thi lam mo di, khong bam duoc */
+.copy[data-copy=""] {
+    opacity: .45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#copy-toast {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #copy-toast.show {
+    opacity: 1;
+  }
+
+
+.hide-horizontal-scrollbar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE, Edge cũ */
+  }
+  
+  .hide-horizontal-scrollbar::-webkit-scrollbar {
+    height: 0px; /* Chrome, Safari */
+  }
+
+/* album....................................................................................... */
+
+.album_header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 18px;
+}
+
+.album_header span {
+    font-family: 'Alex Brush', cursive;
+    font-size: 28px;
+    color: #555;
+    white-space: nowrap;
+    margin-left: 14px;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #b9b9b9;
+    margin-left: 12px;
+    margin-right: 14px;
+}
+
+.album_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 10px;
+    padding: 0 12px;
+}
+
+.album_container > img {
+    width: 100%;
+    height: auto;          /* giu dung ty le goc, khong cat anh */
+    display: block;
+    border-radius: 10px;
+    transition: all 2s ease-in-out;
+}
+
+/* Anh le cuoi cung: can giua, rong bang mot cot */
+.album_container > img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 5px);
+}
+
+.album_left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.album_right {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+/* thank................................................................................... */
+
+.thank_container {
+    height: 100svh;
+    margin-top: 56px;
+    width: 100%;
+    background-image: url(./source/doc/nen_cuoi.jpg);
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.thank_desc > img {
+    height: 50px;
+    margin-top: 12px;
+    
+}
+
+.thank_desc {
+    line-height: 1.5;
+    padding: 8px 16px 26px;
+    background-color: rgba(236, 236, 236, 0.322);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(27px, 7.5vw, 34px);
+    text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.thank_desc {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease-in-out;
+}
+
+.thank_desc.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.footter {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: #ffffffb0;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.footer-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    margin-left: 4px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer-link:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: scale(1.1);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+/* Man hinh lon: gian rong hon mot chut ................................. */
+@media (min-width: 560px) {
+    .album_container {
+        gap: 14px;
+        padding: 0 18px;
+    }
+
+    .album_container > img:last-child:nth-child(odd) {
+        width: calc(50% - 7px);
+    }
+
+    .gt_img {
+        width: 78%;
+    }
+
+    .moi_desc3 {
+        font-size: 15.5px;
+        line-height: 28px;
+    }
+}
+
+/* Ton trong nguoi dung tat hieu ung chuyen dong ......................... */
+@media (prefers-reduced-motion: reduce) {
+    .thiep::before,
+    .nhay-shadow {
+        animation: none;
+    }
+
+    .gt_img,
+    .cf_container,
+    .thank_desc,
+    .album_container > img,
+    .img_small,
+    .img_big {
+        transition-duration: .01ms;
+    }
+}
+
+
+/* Xem anh phong to ..................................................... */
+
+.album_container > img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0b0b;
+    /* chua thanh dieu huong tren dien thoai */
+    padding: max(16px, env(safe-area-inset-top)) 16px
+             max(16px, env(safe-area-inset-bottom));
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lb_img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    /* anh moi doi thi hien dan ra */
+    animation: lbFade .25s ease;
+}
+
+@keyframes lbFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.lb_close {
+    position: absolute;
+    top: max(10px, env(safe-area-inset-top));
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .14);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.lb_nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 64px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .12);
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.lb_prev { left: 8px; }
+.lb_next { right: 8px; }
+
+.lb_close:hover,
+.lb_nav:hover {
+    background-color: rgba(255, 255, 255, .28);
+}
+
+.lb_count {
+    position: absolute;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, .85);
+    font-size: 14px;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+/* Man hinh nho: nut dieu huong nho lai cho do che anh */
+@media (max-width: 420px) {
+    .lb_nav {
+        width: 38px;
+        height: 56px;
+        font-size: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lb_img {
+        animation: none;
+    }
+}
