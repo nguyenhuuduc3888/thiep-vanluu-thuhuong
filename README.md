@@ -30,10 +30,14 @@ Gia đình nhà trai — Liên Sơn, Phường Hoành Sơn, Thị xã Kỳ Anh, 
 ├── source/
 │   ├── chure.jpg       # Ảnh chú rể Văn Lưu
 │   ├── codau.jpg       # Ảnh cô dâu Thu Hương
-│   ├── meta.jpg        # Ảnh preview khi share link
+│   ├── meta.jpg        # Ảnh cưới lễ phục ngang 1200x630 (preview khi share link)
 │   ├── album/01.jpg    # Chú rể
 │   ├── album/02.jpg    # Cô dâu
-│   ├── doc/            # Nền thiệp + 3 ảnh phần "Thư mời"
+│   ├── album/03.jpg    # Ảnh cưới v2: chú rể vest xanh, cô dâu váy cưới (nhìn nhau dưới cổng hoa gỗ)
+│   ├── album/04.jpg    # Ảnh cưới v2: chú rể vest, cô dâu váy cưới dưới cổng hoa
+│   ├── album/05.jpg    # Ảnh cưới v2 studio
+│   ├── album/06.jpg    # Ảnh cưới v2 lúc hoàng hôn
+│   ├── doc/            # Nền thiệp + 3 ảnh phần "Thư mời" (chú rể - ảnh cưới - cô dâu)
 │   ├── music.mp3       # Nhạc nền
 │   └── favicon.png
 └── README.md
@@ -63,11 +67,11 @@ thành link tuyệt đối (đang để tương đối) để ảnh preview hi�
 
 1. Nén ảnh về tối đa 1600px:
    ```bash
-   ffmpeg -i anh-moi.jpg -vf "scale='if(gt(iw,ih),min(1600,iw),-2)':'if(gt(iw,ih),-2,min(1600,ih))'" -q:v 4 source/album/03.jpg
+   ffmpeg -i anh-moi.jpg -vf "scale='if(gt(iw,ih),min(1600,iw),-2)':'if(gt(iw,ih),-2,min(1600,ih))'" -q:v 4 source/album/08.jpg
    ```
 2. Thêm 1 dòng vào `album_container` trong cả hai file:
    ```html
-   <img class="js_album album_left" src="./source/album/03.jpg" alt="">
+   <img class="js_album album_left" src="./source/album/08.jpg" alt="">
    ```
    Số đếm lightbox tự cập nhật, không cần sửa gì thêm.
 
